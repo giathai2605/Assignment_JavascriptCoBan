@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bán Hàng</title>
+    <link href="css/css.css" rel="stylesheet">
+    <script src="js/js.js"></script>
+</head>
+
+<body>
+    <div id="layout">
+        <header>
+            <img src="img/banner.jpg" width="100%" height="500px">
+        </header>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="trangchu.html">
+                        Trang chủ
+                    </a>
+                </li>
+                <li>
+                    <a href="bosuutap.html">
+                        Danh sách cầu thủ TTCN
+                    </a>
+                </li>
+                <li>
+                    <a href="dangky.html">
+                        Đăng ký chuyển nhượng
+                    </a>
+                </li>
+                <li>
+                    <a href="banhang.html">
+                        Thị trường chuyển nhượng
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="banhang">
+            <h2 style="padding-top: 10px; margin-top: 0px;">BÁN HÀNG</h2>
+                <select class="luachon" onchange="hang(this)">
+                    <option value="">--- Mức giá ---</option>
+                    <option value="tc">Mọi mức giá</option>
+                    <option value="0">Từ 0-250$</option>
+                    <option value="250">Từ 250-500$</option>
+                    <option value="500">Trên 500$</option>
+                </select>
+            <hr>
+            <table border="1" id="bang">
+                <tr class="hang">
+                    <td style="width:30px; "><input type="checkbox" class="nut"></td>
+                    <th style="width:150px;">Hàng hóa</th>
+                    <th style="width:100px;">Đơn giá</th>
+                    <th style="width:250px;">Số lượng</th>
+                    <th style="width:150px;">Thành tiền</th>
+                </tr>
+                <tr class="hang3">
+                    <td><input type="checkbox" class="nut" id="nut1" onfocus="mo1()"></td>
+                    <td>iPhone 9</td>
+                    <td>700$</td>
+                    <td><input type="number" min="0" id="soluong1" oninput="tong()" class="ipt3" disabled></td>
+                    <th id="tien1"></th>
+                </tr>
+                <tr class="hang2">
+                    <td><input type="checkbox" class="nut" id="nut2" onfocus="mo2()"></td>
+                    <td>Samsung</td>
+                    <td>400$</td>
+                    <td><input type="number" min="0" id="soluong2" oninput="tong()" class="ipt3" disabled></td>
+                    <th id="tien2"></th>
+                </tr>
+                <tr class="hang1">
+                    <td><input type="checkbox" class="nut" id="nut3" onfocus="mo3()"></td>
+                    <td>Nokia</td>
+                    <td>100$</td>
+                    <td><input type="number" min="0" id="soluong3" oninput="tong()" class="ipt3" disabled></td>
+                    <th id="tien3"></th>
+                </tr>
+                <tr class="hang2">
+                    <td><input type="checkbox" class="nut" id="nut4" onfocus="mo4()"></td>
+                    <td>Sony Xperia</td>
+                    <td>450$</td>
+                    <td><input type="number" min="0" id="soluong4" oninput="tong()" class="ipt3" disabled></td>
+                    <th id="tien4"></th>
+                </tr>
+                <tr class="hang1">
+                    <td><input type="checkbox" class="nut" id="nut5" onfocus="mo5()"></td>
+                    <td>Motorola</td>
+                    <td>180$</td>
+                    <td><input type="number" min="0" id="soluong5" oninput="tong()" class="ipt3" disabled></td>
+                    <th id="tien5"></th>
+                </tr>
+                <tr class="hang3">
+                    <td><input type="checkbox" class="nut" id="nut6" onfocus="mo6()"></td>
+                    <td>Oppo</td>
+                    <td>600$</td>
+                    <td><input type="number" min="0" id="soluong6" oninput="tong()" class="ipt3" disabled></td>
+                    <th id="tien6"></th>
+                </tr>
+                <tr class="hang1">
+                    <td><input type="checkbox" class="nut" id="nut7" onfocus="mo7()"></td>
+                    <td>bPhone</td>
+                    <td>90$</td>
+                    <td><input type="number" min="0" id="soluong7" oninput="tong()" class="ipt3" disabled></td>
+                    <th id="tien7"></th>
+                </tr>
+                <tr>
+                    <th colspan="4">Tổng</th>
+                    <th id="tongne"></th>
+                </tr>
+            </table>
+        </div>
+        <footer class="ft">Assignment - WEB1042 - Nguyễn Gia Thái - PH26876<br> Cao đẳng FPT Polytechnic Hà Nội
+        </footer>
+    </div>
+</body>
+
+</html>

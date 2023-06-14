@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/css.css" rel="stylesheet">
+    <script src="js/js.js"></script>
+</head>
+
+<body>
+    <div id="layout">
+        <header>
+            <img src="img/banner.jpg" width="100%" height="500px">
+        </header>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="trangchu.html">
+                        Trang chủ
+                    </a>
+                </li>
+                <li>
+                    <a href="bosuutap.html">
+                        Danh sách cầu thủ TTCN
+                    </a>
+                </li>
+                <li>
+                    <a href="dangky.html">
+                        Đăng ký chuyển nhượng
+                    </a>
+                </li>
+                <li>
+                    <a href="banhang.html">
+                        Thị trường chuyển nhượng
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div id="frm" >
+            <h2 style="padding-top: 10px; margin: 0 auto; text-align: center;">ĐĂNG KÍ THÀNH VIÊN</h2>
+            <form class="frm1" id="form" onsubmit="return check()">
+                <div class="control">
+                    <label>Mã sinh viên: <span style="color: red;"> *</span></label>
+                </div>
+                <div>
+                <input id="msv" type="text" name="masv" class="ipt" placeholder="VD: PH26876" >
+                <span class="form-message" id="loimsv"></span>
+                </div>
+                <div class="control">
+                    <label>Họ và tên: <span style="color: red;">*</span></label>
+                </div>
+                <div>
+                <input id="hoten" type="text" name="hoten" class="ipt" placeholder="VD: Nguyễn Gia Thái" >
+                <span class="form-message" id="loihoten"></span>
+                </div>
+                <div class="control">
+                    <label>Email: <span style="color: red;"> *</span></label>
+                </div>
+                <div>
+                <input id="email" type="text" name="email" class="ipt" placeholder="VD: tendangnhap@domain">
+                <span class="form-message" id="loiemail"></span>
+                </div>
+                <div class="control">
+                    <label>Giới tính: <span style="color: red;"> *</span></label>
+                </div>
+                <div>
+                <div class="ipt1" id="gender">
+                    <input type="radio" name="gt" id="nam" value="nam">
+                    <label>Nam</label>
+                    <input type="radio" name="gt" id="nu" value="nu">
+                    <label>Nữ</label>
+                </div>
+                <span class="form-message" id="gioitinh"></span>
+                </div>
+                <div class="control">
+                    <label>Sở thích: <span style="color: red;"> *</span></label>
+                </div>
+                <div>
+                <div class="ipt1" id="sothich">
+                    <label>Đọc sách</label>
+                    <input type="checkbox" name="st" value="sach">
+                    <label>Du lịch</label>
+                    <input type="checkbox" name="st" value="dulich">
+                    <label>Âm nhạc</label>
+                    <input type="checkbox" name="st" value="nhac">
+                    <label>Ẩm thực</label>
+                    <input type="checkbox" name="st" value="amthuc">
+                    <label>Khác</label>
+                    <input type="checkbox" name="st" value="khac">
+                </div>
+                <span class="form-message" id="loist"></span>
+                </div>
+                <div class="control">
+                    <label>Quốc tịch: <span style="color: red;"> *</span></label>
+                </div>
+                <select class="ipt1" id="quoctich" onchange="select(this)" onblur="bochon(this)">
+                    <option value="">Chọn quốc tịch</option>
+                    <option value="vietnam">Việt Nam</option>
+                    <option value="hanquoc">Hàn Quốc</option>
+                    <option value="nhatban">Nhật Bản</option>
+                    <option value="khac" id="khac">Khác...</option>
+                    <input type="text" style="margin-top: 10px; width: 405px; height: 20px;" id="ipquoctich" hidden>
+                </select>
+                <span class="form-message1" id="qt"></span>
+                <div class="control">
+                    <label>Ghi chú: <span style="color: red;"> *</span></label>
+                </div>
+                <textarea class="text" placeholder="Ít hơn 200 kí tự" id="ghichu" onblur="text()" ></textarea>
+                <span id="gcloi"></span>
+                <div>
+                    <button class="bt" id="nut" type="submit" >Đăng ký</button>
+                </div>
+            </form>
+        </div>
+        <footer class="ft1">Assignment - WEB1042 - Nguyễn Gia Thái - PH26876<br> Cao đẳng FPT Polytechnic Hà Nội
+        </footer>
+    </div>
+    <script>
+        Validator({
+            form: '#form',
+            rules: [
+                Validator.isRequired('#msv'),
+                Validator.isRequired('#hoten'),
+                Validator.isEmail('#email'),
+                Validator.isRequired('#ipquoctich'),
+            ]
+        });
+    </script>
+</body>
+
+</html>
